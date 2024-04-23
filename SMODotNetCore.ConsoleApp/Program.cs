@@ -1,6 +1,6 @@
 ﻿using SMODotNetCore.ConsoleApp;
 
-Console.WriteLine("CRUD With Dapper");
+Console.WriteLine("CRUD With EFCore");
 //AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.read();
 //adoDotNetExample.create("A Tree","Josha","josh@gmail.com");
@@ -8,5 +8,8 @@ Console.WriteLine("CRUD With Dapper");
 //adoDotNetExample.delete(1);
 //adoDotNetExample.edit(2);
 
-DapperExample de = new DapperExample(); 
-de.Run();
+//DapperExample de = new DapperExample(); 
+//de.Run();
+
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.RunEFCore();
