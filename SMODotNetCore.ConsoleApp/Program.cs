@@ -1,4 +1,4 @@
-﻿using SMODotNetCore.ConsoleApp;
+﻿using SMODotNetCore.ConsoleApp.EFCoreExamples;
 
 Console.WriteLine("CRUD With EFCore");
 //AdoDotNetExample adoDotNetExample = new AdoDotNetExample();

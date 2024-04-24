@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using SMODotNetCore.ConsoleApp.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMODotNetCore.ConsoleApp
+namespace SMODotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
@@ -49,7 +50,7 @@ namespace SMODotNetCore.ConsoleApp
             {
                 BlogTitle = title,
                 BlogAuthor = author,
-                BlogContent = content   
+                BlogContent = content
             };
             db.Blogs.Add(data);
             int result = db.SaveChanges();
@@ -60,7 +61,7 @@ namespace SMODotNetCore.ConsoleApp
         private void update(int id, string title, string author, string content)
         {
             var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
-            if (item is null) 
+            if (item is null)
             {
                 Console.WriteLine("Data Not Found !");
             }
@@ -72,10 +73,10 @@ namespace SMODotNetCore.ConsoleApp
             string message = result > 0 ? "Update Successfull !" : "Update Successfull !";
             Console.WriteLine(message);
         }
-        private void delete(int id) 
+        private void delete(int id)
         {
-            var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);  
-            if (item is null) 
+            var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
+            if (item is null)
             {
                 Console.WriteLine("Data Not Found !");
             }

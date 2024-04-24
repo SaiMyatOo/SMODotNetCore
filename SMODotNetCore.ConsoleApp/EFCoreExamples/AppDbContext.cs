@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SMODotNetCore.ConsoleApp.Dtos;
+using SMODotNetCore.ConsoleApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMODotNetCore.ConsoleApp
+namespace SMODotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class AppDbContext : DbContext
     {

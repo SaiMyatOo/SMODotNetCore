@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using SMODotNetCore.ConsoleApp.Dtos;
+using SMODotNetCore.ConsoleApp.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMODotNetCore.ConsoleApp
+namespace SMODotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -18,7 +20,7 @@ namespace SMODotNetCore.ConsoleApp
             //Edit(11);
             //Create("Dota1","Blizzard","Warcraft III");
             //Update(1,"General","EA Games","EA");
-            Delete(1); 
+            Delete(1);
         }
         private void Read()
         {
@@ -36,7 +38,7 @@ namespace SMODotNetCore.ConsoleApp
         private void Edit(int id)
         {
             using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
-            var item = dbConnection.Query<BlogDto>("select * from Tbl_Blog where BlogId=@BlogId",new BlogDto {BlogId = id}).FirstOrDefault();
+            var item = dbConnection.Query<BlogDto>("select * from Tbl_Blog where BlogId=@BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
             if (item is null)
             {
                 Console.WriteLine("Data Not Found !");
@@ -66,7 +68,7 @@ namespace SMODotNetCore.ConsoleApp
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
-            int result = db.Execute(query,data);
+            int result = db.Execute(query, data);
             string message = result > 0 ? "Create Successfull !" : "Create Error !";
             Console.WriteLine(message);
             Console.ReadKey();
@@ -79,28 +81,28 @@ namespace SMODotNetCore.ConsoleApp
                 BlogTitle = title,
                 BlogAuthor = author,
                 BlogContent = content
-            }; 
+            };
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             string query = @"UPDATE [dbo].[Tbl_Blog]
    SET [BlogTitle] = @BlogTitle
       ,[BlogAuthor] = @BlogAuthor
       ,[BlogContent] = @BlogContent
- WHERE BlogId = @BlogId;"; 
-            var result = db.Execute(query,item);
+ WHERE BlogId = @BlogId;";
+            var result = db.Execute(query, item);
             string message = result > 0 ? "Update Successfull !" : "Update Error !";
             Console.WriteLine(message);
-            Console.ReadKey(); 
+            Console.ReadKey();
         }
         private void Delete(int id)
         {
             var data = new BlogDto
             {
                 BlogId = id
-            }; 
+            };
             using IDbConnection db = new SqlConnection(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
-      WHERE BlogId=@BlogId"; 
-            int result = db.Execute(query,data);
+      WHERE BlogId=@BlogId";
+            int result = db.Execute(query, data);
             string message = result > 0 ? "Delete Successfull !" : "Delete Error !";
             Console.WriteLine(message);
             Console.ReadKey();
