@@ -12,7 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.RestApi", "SMODotNetCore.RestApi\SMODotNetCore.RestApi.csproj", "{769425E7-27ED-4E47-8891-8613D3EAE753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.Share", "SMODotNetCore.Share\SMODotNetCore.Share.csproj", "{E8D2FE49-02BB-49F2-85BB-A166A445A53E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.Share", "SMODotNetCore.Share\SMODotNetCore.Share.csproj", "{E8D2FE49-02BB-49F2-85BB-A166A445A53E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.RestApiWithNLayer", "SMODotNetCore.RestApiWithNLayer\SMODotNetCore.RestApiWithNLayer.csproj", "{8E717AA4-B097-47D5-9706-3F28E2AD76DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.ConsoleAppHttpClient", "SMODotNetCore.ConsoleAppHttpClient\SMODotNetCore.ConsoleAppHttpClient.csproj", "{EDF571C4-478C-4303-9499-773BF8535364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.ConsoleAppHttpClientExample", "SMODotNetCore.ConsoleAppHttpClientExample\SMODotNetCore.ConsoleAppHttpClientExample.csproj", "{9C746577-D701-4B66-A84B-99ACA6009BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.ConsoleAppRestClientExamples", "SMODotNetCore.ConsoleAppRestClientExamples\SMODotNetCore.ConsoleAppRestClientExamples.csproj", "{CA5AFEBC-37EB-4C94-9AE7-E9A577383C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +40,22 @@ Global
 		{E8D2FE49-02BB-49F2-85BB-A166A445A53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8D2FE49-02BB-49F2-85BB-A166A445A53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8D2FE49-02BB-49F2-85BB-A166A445A53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E717AA4-B097-47D5-9706-3F28E2AD76DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E717AA4-B097-47D5-9706-3F28E2AD76DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E717AA4-B097-47D5-9706-3F28E2AD76DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E717AA4-B097-47D5-9706-3F28E2AD76DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF571C4-478C-4303-9499-773BF8535364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF571C4-478C-4303-9499-773BF8535364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF571C4-478C-4303-9499-773BF8535364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF571C4-478C-4303-9499-773BF8535364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C746577-D701-4B66-A84B-99ACA6009BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C746577-D701-4B66-A84B-99ACA6009BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C746577-D701-4B66-A84B-99ACA6009BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C746577-D701-4B66-A84B-99ACA6009BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5AFEBC-37EB-4C94-9AE7-E9A577383C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5AFEBC-37EB-4C94-9AE7-E9A577383C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5AFEBC-37EB-4C94-9AE7-E9A577383C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5AFEBC-37EB-4C94-9AE7-E9A577383C47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
