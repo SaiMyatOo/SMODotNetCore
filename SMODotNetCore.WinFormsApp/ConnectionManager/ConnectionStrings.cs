@@ -1,8 +1,13 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SMODotNetCore.RestApi.ConnectionManager
+namespace SMODotNetCore.WinFormsApp.ConnectionManager
 {
-    public static class ConnectionStrings
+    public class ConnectionStrings
     {
         public static SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {

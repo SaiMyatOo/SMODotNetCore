@@ -1,8 +1,8 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace SMODotNetCore.RestApi.ConnectionManager
+namespace SMODotNetCore.PizzaApi.ConnectionManager
 {
-    public static class ConnectionStrings
+    public class ConnectionStrings
     {
         public static SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
@@ -10,7 +10,7 @@ namespace SMODotNetCore.RestApi.ConnectionManager
             InitialCatalog = "DotNetTrainingBatch4",
             UserID = "sa",
             Password = "sa@123",
-            TrustServerCertificate = true
+            TrustServerCertificate = true,
         };
     }
 }
