@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMODotNetCore.WinFormsApp.Queries
+namespace SMODotNetCore.WinFormsApp.Queries;
+
+internal class BlogQuery
 {
-    internal class BlogQuery
-    {
-        public static string BlogCreate { get; } = @"INSERT INTO [dbo].[Tbl_Blog]
+    public static string BlogCreate { get; } = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
            ,[BlogAuthor]
            ,[BlogContent])
@@ -16,5 +16,10 @@ namespace SMODotNetCore.WinFormsApp.Queries
            (@BlogTitle
            ,@BlogAuthor       
            ,@BlogContent)";
-    }
+
+    public static string BlogList { get; } = @"SELECT [BlogId]
+      ,[BlogTitle]
+      ,[BlogAuthor]
+      ,[BlogContent]
+  FROM [dbo].[Tbl_Blog]";
 }

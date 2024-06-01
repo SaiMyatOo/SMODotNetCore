@@ -24,9 +24,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.ConsoleAppRes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.PizzaApi", "SMODotNetCore.PizzaApi\SMODotNetCore.PizzaApi.csproj", "{E760481B-FA9B-44B2-838C-4CA03A86F7F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.ConsoleAppRefitExample", "SMODotNetCore.ConsoleAppRefitExample\SMODotNetCore.ConsoleAppRefitExample.csproj", "{A1EC13B9-000D-43B9-81CA-64E7E162D81F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.ConsoleAppRefitExample", "SMODotNetCore.ConsoleAppRefitExample\SMODotNetCore.ConsoleAppRefitExample.csproj", "{A1EC13B9-000D-43B9-81CA-64E7E162D81F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMODotNetCore.WinFormsApp", "SMODotNetCore.WinFormsApp\SMODotNetCore.WinFormsApp.csproj", "{64BA66F9-DC32-42DF-9223-8088A407E838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.WinFormsApp", "SMODotNetCore.WinFormsApp\SMODotNetCore.WinFormsApp.csproj", "{64BA66F9-DC32-42DF-9223-8088A407E838}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMODotNetCore.WindowsFormAppSqlInjection", "SMODotNetCore.WindowsFormAppSqlInjection\SMODotNetCore.WindowsFormAppSqlInjection.csproj", "{234A45B9-C2F7-48F2-BA92-745EEDE55672}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{64BA66F9-DC32-42DF-9223-8088A407E838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64BA66F9-DC32-42DF-9223-8088A407E838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64BA66F9-DC32-42DF-9223-8088A407E838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{234A45B9-C2F7-48F2-BA92-745EEDE55672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234A45B9-C2F7-48F2-BA92-745EEDE55672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234A45B9-C2F7-48F2-BA92-745EEDE55672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234A45B9-C2F7-48F2-BA92-745EEDE55672}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
