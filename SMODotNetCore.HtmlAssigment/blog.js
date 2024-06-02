@@ -3,7 +3,7 @@ let blogId = null;
 
 getBlogTable();
 
-// createBlog();
+// readBlog();
 
 function readBlog() {
     let lst = getBlogs();
@@ -48,8 +48,8 @@ function createBlog(title, author, content) {
     lst.push(requestModel);
 
     const jsonBlog = JSON.stringify(lst);
-    localStorage.setItem(tblBlog, jsonBlog);
-    // localStorage.setItem("blogs", requestModel);
+    sessionStorage.setItem(tblBlog, jsonBlog);
+    // sessionStorage.setItem("blogs", requestModel);
 
     successMessage("Saving Successful.");
     clearControls();
@@ -78,7 +78,7 @@ function updateBlog(id, title, author, content) {
     lst[index] = item;
 
     const jsonBlog = JSON.stringify(lst);
-    localStorage.setItem(tblBlog, jsonBlog);
+    sessionStorage.setItem(tblBlog, jsonBlog);
 
     successMessage('Updating Successful.');
 }
@@ -97,7 +97,7 @@ function deleteBlog(id) {
 
     lst = lst.filter(x => x.id !== id);
     const jsonBlog = JSON.stringify(lst);
-    localStorage.setItem(tblBlog, jsonBlog);
+    sessionStorage.setItem(tblBlog, jsonBlog);
 
     successMessage("Deleting Successful.");
 
@@ -111,7 +111,7 @@ function uuidv4() {
 }
 
 function getBlogs() {
-    const blogs = localStorage.getItem(tblBlog);
+    const blogs = sessionStorage.getItem(tblBlog);
     console.log(blogs);
 
     let lst = [];
