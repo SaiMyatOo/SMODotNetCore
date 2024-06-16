@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SMODotNetCore.ConsoleApp
 {
-    internal class AdoDotNetExample
+    public class AdoDotNetExample
     {
         private readonly SqlConnectionStringBuilder _stringBuilder = new SqlConnectionStringBuilder()
         {
@@ -17,6 +17,11 @@ namespace SMODotNetCore.ConsoleApp
             UserID = "sa",
             Password = "sa@123"
         };
+        public AdoDotNetExample(SqlConnectionStringBuilder connectionStringBuilder)
+        {
+            _stringBuilder = connectionStringBuilder;
+        }
+
 
         public void edit(int id)
         {

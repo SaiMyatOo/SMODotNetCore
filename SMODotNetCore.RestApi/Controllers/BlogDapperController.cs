@@ -14,7 +14,13 @@ namespace SMODotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogDapperController : ControllerBase
     {
-        private readonly DapperService dapperService = new DapperService(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
+        //private readonly DapperService dapperService = new DapperService(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
+
+        private readonly DapperService _dapperService;
+        public BlogDapperController(DapperService dapperService)
+        {
+            _dapperService = dapperService;      
+        }
         [HttpGet]
         public IActionResult Read()
         {

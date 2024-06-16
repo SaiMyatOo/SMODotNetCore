@@ -14,7 +14,13 @@ namespace SMODotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogAdoDotNetController : ControllerBase
     {
-        private readonly AdoDotNetService _service = new AdoDotNetService(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
+        //private readonly AdoDotNetService _service = new AdoDotNetService(ConnectionStrings.sqlConnectionStringBuilder.ConnectionString);
+
+        private readonly AdoDotNetService _adoDotNetService;
+        public BlogAdoDotNetController(AdoDotNetService adoDotNetService)
+        {
+            _adoDotNetService = adoDotNetService;
+        }
         [HttpGet]
         public IActionResult Read()
         {

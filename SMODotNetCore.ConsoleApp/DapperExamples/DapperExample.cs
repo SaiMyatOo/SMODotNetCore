@@ -12,8 +12,18 @@ using System.Threading.Tasks;
 
 namespace SMODotNetCore.ConsoleApp.DapperExamples
 {
-    internal class DapperExample
+    public class DapperExample
     {
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+        public DapperExample(SqlConnectionStringBuilder sqlConnectionStringBuilder)
+        {
+            _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+        }
+        public DapperExample()
+        {
+
+        }
         public void Run()
         {
             //Read();

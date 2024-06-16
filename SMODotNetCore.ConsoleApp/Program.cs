@@ -1,4 +1,10 @@
-﻿using SMODotNetCore.ConsoleApp.EFCoreExamples;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SMODotNetCore.ConsoleApp;
+using SMODotNetCore.ConsoleApp.DapperExamples;
+using SMODotNetCore.ConsoleApp.EFCoreExamples;
+using SMODotNetCore.ConsoleApp.Services;
+using System.Data.SqlClient;
 
 Console.WriteLine("CRUD With EFCore");
 //AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
@@ -11,5 +17,28 @@ Console.WriteLine("CRUD With EFCore");
 //DapperExample de = new DapperExample(); 
 //de.Run();
 
-EFCoreExample eFCoreExample = new EFCoreExample();
-eFCoreExample.RunEFCore();
+//EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.RunEFCore();
+
+var connectionString = ConnectionStrings.sqlConnectionStringBuilder.ConnectionString;
+var sqlConnectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
+
+var serviceProvider = new ServiceCollection()
+    .AddScoped(n => new AdoDotNetExample(sqlConnectionStringBuilder))
+    .AddScoped(n => new DapperExample(sqlConnectionStringBuilder))
+    .AddDbContext<AppDbContext>(opt =>
+    {
+        opt.UseSqlServer(connectionString);
+    })
+    .AddScoped<EFCoreExample>()
+    .BuildServiceProvider();
+
+//AppDbContext db = serviceProvider.GetRequiredService<AppDbContext>();
+
+var adoDotNetExample = serviceProvider.GetRequiredService<AdoDotNetExample>();
+//adoDotNetExample.Read();
+
+//var dapperExample = serviceProvider.GetRequiredService<DapperExample>();
+//dapperExample.Run();
+
+Console.ReadLine();
